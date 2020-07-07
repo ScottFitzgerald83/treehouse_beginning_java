@@ -30,5 +30,6 @@ public class Example {
         while (dispenser.dispense()) {
             System.out.println("Chomp!");
         }
+        dispenser.fill(400); // should throw illegal arg exception
     }
 }

@@ -16,6 +16,10 @@ class PezDispenser {
 
     // Operator overloading for specified pez amount
     public void fill(int pezAmount) {
+        int newAmount = pezCount + pezAmount;
+        if (newAmount > MAX_PEZ) {
+            throw new IllegalArgumentException("Too many PEZ!");
+        }
         pezCount += pezAmount;
     }
 
