@@ -14,6 +14,11 @@ class PezDispenser {
         pezCount = MAX_PEZ;
     }
 
+    // Operator overloading for specified pez amount
+    public void fill(int pezAmount) {
+        pezCount += pezAmount;
+    }
+
     public boolean isEmpty() {
         return pezCount == 0;
     }
