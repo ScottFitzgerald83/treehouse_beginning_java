@@ -21,4 +21,13 @@ class PezDispenser {
     public String getCharacterName() {
         return characterName;
     }
+
+    public boolean dispense() {
+        boolean wasDispensed = false;
+        if (!isEmpty()) {
+            pezCount--;
+            wasDispensed = true;
+        }
+        return wasDispensed;
+    }
 }
