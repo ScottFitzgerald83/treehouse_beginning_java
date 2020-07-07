@@ -30,6 +30,12 @@ public class Example {
         while (dispenser.dispense()) {
             System.out.println("Chomp!");
         }
-        dispenser.fill(400); // should throw illegal arg exception
+        try {
+            dispenser.fill(400); // should throw illegal arg exception
+        } catch (IllegalArgumentException iae) {
+            System.out.println("Whoa there!");
+            System.out.printf("The error was %s", iae.getMessage());
+        }
     }
 }
+
